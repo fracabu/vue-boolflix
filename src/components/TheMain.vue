@@ -11,14 +11,17 @@
                 </li>
             </ul>
         </div>
-
+        <div class="seriesList">
+            <li v-for=" serie in seriesList" :key="serie.id"></li>
+        </div>
     </div>
 </template>
 
 <script>
 export default{
     props:{
-        moviesList:Array
+        moviesList:Array,
+        seriesList:Array
     },
 }
 

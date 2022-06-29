@@ -41,6 +41,7 @@ export default {
         },
       }) .then((resp) =>{
         this.moviesList = resp.data.results;
+        this.serieLists = resp.data.results
 
       })
 
