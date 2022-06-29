@@ -4,6 +4,10 @@
             <ul>
                 <li v-for = "movie in moviesList" :key="movie.id">
                 {{movie.original_title}}
+                {{movie.title}}
+                {{movie.original_language}}
+                {{movie.vote_average}}
+
                 </li>
             </ul>
         </div>
