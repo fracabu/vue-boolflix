@@ -2,31 +2,34 @@
     <div>
         <div class="moviesList">
             <ul>
-                <li v-for = "movie in moviesList" :key="movie.id">
-                {{movie.original_title}}
-                {{movie.title}}
-                {{movie.original_language}}
-                {{movie.vote_average}}
+                <li v-for="movie in moviesList" :key="movie.id">
+                    {{ movie.original_title }}
+                    {{ movie.title }}
+                    {{ movie.original_language }}
+                    {{ movie.vote_average }}
 
                 </li>
             </ul>
         </div>
-        <div class="seriesList">
+        <!-- <div class="seriesList">
             <li v-for=" serie in seriesList" :key="serie.id"></li>
-        </div>
+            {{ serie.original_title }}
+            {{ serie.title }}
+            {{ serie.original_language }}
+            {{ serie.vote_average }}
+        </div> -->
     </div>
 </template>
 
 <script>
-export default{
-    props:{
-        moviesList:Array,
-        seriesList:Array
+export default {
+    props: {
+        moviesList: Array,
+        seriesList: Array
     },
 }
 
 </script>
 
 <style lang="scss" scoped>
-
 </style>

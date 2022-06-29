@@ -3,7 +3,7 @@
 
     <TheHeader @searchTextChanged="onSearchTextChanged"></TheHeader>
 
-    <TheMain :moviesList="moviesList"></TheMain>
+    <TheMain :moviesList="moviesList" :seriesList="seriesList"></TheMain>
 
   </div>
 </template>
@@ -25,7 +25,8 @@ export default {
   data() {
     return {
       searchText: "",
-      moviesList:[]
+      moviesList:[],
+      serieLists:[]
     }
   },
   methods: {
@@ -41,7 +42,7 @@ export default {
         },
       }) .then((resp) =>{
         this.moviesList = resp.data.results;
-        this.serieLists = resp.data.results
+        this.serieLists = resp.data.results;
 
       })
 
