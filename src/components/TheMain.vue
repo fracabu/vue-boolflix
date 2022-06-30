@@ -11,15 +11,15 @@
                 </li>
             </ul>
         </div>
-        <div class="seriesList">
-            <li v-for="(serie,i) in seriesList" :key="i">
+        <!-- <div class="seriesList">
+            <li v-for="(serie) in seriesList" :key="serie.id">
             {{ serie.original_title }}
             {{ serie.title }}
             {{ serie.original_language }}
             {{ serie.vote_average }}
             
             </li>
-        </div>
+        </div> -->
     </div>
 </template>
 
@@ -30,7 +30,7 @@ export default {
         moviesList: Array,
         seriesList: Array
     },  components: {
- 
+
     MovieCard
 },
 }
