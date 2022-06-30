@@ -5,6 +5,10 @@
 
     <TheMain :moviesList="moviesList" :seriesList="seriesList"></TheMain>
 
+    <MovieRating :vote="9.7"></MovieRating>
+
+    <MovieCard></MovieCard>
+
   </div>
 </template>
 
@@ -14,13 +18,17 @@
 import axios from 'axios';
 import TheHeader from './components/TheHeader.vue';
 import TheMain from './components/TheMain.vue';
+import MovieRating from './components/MovieRating.vue';
+import MovieCard from './components/MovieCard.vue';
 
 export default {
   name: "App",
   components: {
     TheHeader,
     TheMain,
-  },
+    MovieRating,
+    MovieCard
+},
 
   data() {
     return {
@@ -53,6 +61,9 @@ export default {
 </script>
 
 <style lang="scss">
+
+@import "./assets/main.scss";
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -61,4 +72,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
