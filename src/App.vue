@@ -7,7 +7,6 @@
 
     <MovieRating :vote="9.7"></MovieRating>
 
-    <MovieCard></MovieCard>
 
   </div>
 </template>
@@ -19,7 +18,6 @@ import axios from 'axios';
 import TheHeader from './components/TheHeader.vue';
 import TheMain from './components/TheMain.vue';
 import MovieRating from './components/MovieRating.vue';
-import MovieCard from './components/MovieCard.vue';
 
 export default {
   name: "App",
@@ -27,14 +25,14 @@ export default {
     TheHeader,
     TheMain,
     MovieRating,
-    MovieCard
+    
 },
 
   data() {
     return {
       searchText: "",
       moviesList:[],
-      serieLists:[]
+      seriesList:[]
     }
   },
   methods: {
@@ -50,7 +48,7 @@ export default {
         },
       }) .then((resp) =>{
         this.moviesList = resp.data.results;
-        this.serieLists = resp.data.results;
+        this.seriesList = resp.data.results;
 
       })
 

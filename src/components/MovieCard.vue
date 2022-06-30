@@ -1,10 +1,8 @@
 <template>
     <div>
-        <img :src="posterImage" alt="">
+        <img :src="posterImage " alt="">
 
     </div>
-
-
 </template>
 
 <script>

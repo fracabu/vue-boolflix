@@ -1,18 +1,22 @@
 <template>
     <div>
-        {{vote5}}
+
+        {{ vote5 }}
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
     </div>
+
 </template>
-<i class="fa-solid fa-star"></i>
+
 <script>
 export default {
-    props:{
+    props: {
         vote: Number
 
-    }, 
-    computed:{
-        vote5(){
-        return Math.ceil(this.vote / 2);
+    },
+    computed: {
+        vote5() {
+            return Math.ceil(this.vote / 2);
         },
 
     },
@@ -21,5 +25,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 </style>
